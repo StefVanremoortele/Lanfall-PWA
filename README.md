@@ -46,11 +46,10 @@ Payment stays the same: pay cash @ delivery
 - clone the project
 - step into the folder
 <b>
-- npm install -g typescript
-- npm install -g typings
-- npm install -g @angular/cli@latest
+- npm install
 </b>
-Run the project: ng serve 
+
+Run the project: <b>ng serve</b> 
 <hr/>
 #### TODO: A lot (read TODO.md)
 <hr/>
