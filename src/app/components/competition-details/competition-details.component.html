@@ -1,0 +1,12 @@
+<div class="wrapper" *ngIf="offline" class="no-connection">
+  <md-card>
+    <div class="picture-wrapper">
+      <img class="offline-image" md-card-image src="../../../assets/images/offline.png">
+    </div>
+    <md-card-content>
+      <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work offline.</p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>
