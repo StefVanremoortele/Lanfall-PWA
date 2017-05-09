@@ -1,4 +1,6 @@
-# Lanfall-PWA
-Lanfall Progressive Web App
+# Lanfall PWA
+#### Lanfall v5.0 Progressive Web app
 
-## Git.Init :-)
+<hr/>
+
+TODO: Alot
