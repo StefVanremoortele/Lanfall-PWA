@@ -7,8 +7,7 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 <br/>
 <br/>
 
-<u>Details of the app:</u>
-
+<u>Details of the app:</u><br/>
 <ul>
 	<li>Shows <b>details about the available competitions</b> (Prizes, Rules, Teams, ...)</li>
 	<li>Lets <b>Identified users vote</b> on a running match for all competitions</li>
@@ -33,8 +32,7 @@ After registering their app they can go to Now Playing, look for running games a
 At the end of the LAN, the <b>Man Of The Lan</b> will receive a prize/applause
 </em>
 
-<u>Details of Food & Beverage:</u>
-
+<u>Details of Food & Beverage:</u><br/>
 Users will be able to <b>order foods & drinks</b>.
 Those will be <b>served at their seat</b>.
 <br/>
