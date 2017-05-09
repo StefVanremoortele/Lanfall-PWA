@@ -11,7 +11,7 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 	<li>Lets <b>Identified users vote</b> on a running match for all competitions</li>
 	<li>Shows a <b>history</b> of <b>recently ended matches</b></li>
 	<li>Uses <b>QR codes</b> to let the <b>users identify theirselves</b></li>
-	<li>Lets users <b>order</b< food & drinks <b>at their table</b></li>
+	<li>Lets users <b>order food & drinks </b>at their table</b></li>
 </ul>
 </em>
 
@@ -35,6 +35,18 @@ Those will be <b>served at their seat</b>.
 Payment stays the same: pay cash @ delivery
 </em>
 
+<hr/>
+#### Installation
+<hr/>
+** make sure you have npm installed **
+- clone the project
+- step into the folder
+<b>
+- npm install -g typescript
+- npm install -g typings
+- npm install -g @angular/cli@latest
+</b>
+Run the project: ng serve 
 <hr/>
 #### TODO: A lot (read TODO.md)
 <hr/>
