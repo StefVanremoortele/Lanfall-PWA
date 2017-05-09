@@ -4,6 +4,7 @@
 <hr/>
 <em>
 An application that (hopefully) will serve during the weekend of Lanfall's LAN-party Edition 5
+<br/>
 
 <u>Details of the app:</u>
 <ul>
@@ -26,19 +27,18 @@ After registering their app they can go to Now Playing, look for running games a
 At the end of the LAN, the <b>Man Of The Lan</b> will receive a prize/applause
 </em>
 
-<em>
 <u>Details of Food & Beverage:</u>
 
 Users will be able to <b>order foods & drinks</b>.
 Those will be <b>served at their seat</b>.
 <br/>
 Payment stays the same: pay cash @ delivery
-</em>
 
-<hr/>
-#### Installation
-<hr/>
+---
+### Installation
+---
 ** make sure you have npm installed **
+
 - clone the project
 - step into the folder
 <b>
