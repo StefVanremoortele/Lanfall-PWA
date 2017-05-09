@@ -7,6 +7,7 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 <br/>
 
 <u>Details of the app:</u>
+
 <ul>
 	<li>Shows <b>details about the available competitions</b> (Prizes, Rules, Teams, ...)</li>
 	<li>Lets <b>Identified users vote</b> on a running match for all competitions</li>
@@ -14,6 +15,10 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 	<li>Uses <b>QR codes</b> to let the <b>users identify theirselves</b></li>
 	<li>Lets users <b>order food & drinks </b>at their table</b></li>
 </ul>
+
+App will be written in angular-material
+
+
 </em>
 
 <em>
