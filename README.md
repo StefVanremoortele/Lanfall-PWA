@@ -5,6 +5,7 @@
 <em>
 An application that (hopefully) will serve during the weekend of Lanfall's LAN-party Edition 5
 <br/>
+<br/>
 
 <u>Details of the app:</u>
 
@@ -16,9 +17,9 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 	<li>Lets users <b>order food & drinks </b>at their table</b></li>
 </ul>
 
-App will be written in angular-material
+<b>App will be using angular-material</b>
 
-
+<br/>
 </em>
 
 <em>
