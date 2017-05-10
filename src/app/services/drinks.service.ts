@@ -9,13 +9,12 @@ export class DrinksService {
   }
 
   getDrinks(): Observable<any> {
-    console.log("Gettings drinks");
     return this.http
-      .get(`../../assets/data/foods.json`,
-        this.getRequestHeaders())
-      .map(res => res.json())
+      .get(`http://localhost:3000/food`, this.getRequestHeaders())
+      .map(res=>res.json())
       .catch(err => Observable.throw(err));
   }
+  
 
   public getRequestHeaders() {
     const headers: Headers = new Headers();

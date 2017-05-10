@@ -1,0 +1,81 @@
+{
+        "id": 1,
+        "game_id": 3,
+        "teams": [
+            {
+                "team_id": 1,
+                "team_name": "Walstead and Sons"
+            },
+            {
+                "team_id": 4,
+                "team_name": "Peterson Computing"
+            }
+        ],
+        "starting_at": "2014-09-20T07:26:02.142Z",
+        "state": "finished"
+    },
+    {
+        "id": 2,
+        "game_id": 3,
+        "teams": [
+            {
+                "team_id": 3,
+                "team_name": "Mcnamee Corporation"
+            },
+            {
+                "team_id": 9,
+                "team_name": "Gerhart Computing"
+            }
+        ],
+        "starting_at": "2014-07-14T11:01:51.597Z",
+        "state": "playing"
+    },
+    {
+        "id": 3,
+        "game_id": 8,
+        "teams": [
+            {
+                "team_id": 8,
+                "team_name": "Seacrist Brothers"
+            },
+            {
+                "team_id": 3,
+                "team_name": "Masimore and Sons"
+            }
+        ],
+        "starting_at": "2013-08-08T17:05:20.451Z",
+        "state": "finished"
+    },
+    {
+        "id": 4,
+        "game_id": 7,
+        "teams": [
+            {
+                "team_id": 8,
+                "team_name": "Crompton Computing"
+            },
+			{
+                "team_id": 3,
+				"team_name": "Crompton Computing"
+            }
+        ],
+        "starting_at": "2013-09-15T14:33:56.295Z",
+        "state": "playing"
+    },
+    {
+        "id": 5,
+        "game_id": 8,
+        "teams": [
+            {
+                "team_id": 4,
+                "team_name": "Mendiola International"
+            },
+            {
+                "team_id": 2,
+                "team_name": "Bradley Computing"
+            }
+        ],
+        "starting_at": "2014-01-18T00:53:10.898Z",
+        "state": "finished"
+    }
+])

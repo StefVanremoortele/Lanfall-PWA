@@ -5,7 +5,9 @@ var cacheName = 'LFv5.0-Cache-1.0';
 
 //Files to save in cache
 var files = [
-  './'
+  './*.js',
+  './*.json',
+  './*.png'
 ];
 
 //Adding `install` event listener

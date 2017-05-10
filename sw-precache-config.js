@@ -10,6 +10,9 @@ module.exports = {
   stripPrefix: 'dist/',
   navigateFallback: '/index.html',
   runtimeCaching: [
-
+    {
+      urlPattern: /OrderAtYourSeat/,
+      handler: 'networkFirst'
+    }
   ]
 };
