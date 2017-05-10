@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'competition-details',
+  selector: 'app-competition-details',
   templateUrl: './competition-details.component.html',
   styleUrls: ['./competition-details.component.scss']
 })
@@ -13,7 +13,5 @@ export class CompetitionDetailsComponent {
   constructor() {
     
   }
-
-  
 
 }

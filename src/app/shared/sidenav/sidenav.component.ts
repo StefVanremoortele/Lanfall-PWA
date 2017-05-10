@@ -12,6 +12,10 @@ export class SidenavComponent {
   constructor() {
     this.navigationRoutes = [
       {
+        name: 'Home',
+        url: './Home'
+      },
+      {
         name: 'Competitions',
         url: './Competitions'
       },

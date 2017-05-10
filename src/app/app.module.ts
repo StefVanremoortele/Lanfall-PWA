@@ -9,15 +9,21 @@ import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import {CompetitionDetailsComponent} from "./components/competition-details/competition-details.component";
+import { CompetitionDetailsComponent } from "./components/competition-details/competition-details.component";
+import { NowPlayingComponent } from "./components/now-playing/now-playing.component";
+import { UpcomingGamesComponent } from "./components/upcoming-games/upcoming-games.component";
+import { HomeComponent } from "./components/home/home.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    NotFoundComponent,
-    CompetitionDetailsComponent
+    HomeComponent,
+    CompetitionDetailsComponent,
+    NowPlayingComponent,
+    UpcomingGamesComponent,
+    NotFoundComponent
   ],
   imports: [
     RouterModule,
