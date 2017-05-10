@@ -16,6 +16,10 @@ export class SidenavComponent {
         url: './Home'
       },
       {
+        name: 'Order@Seat',
+        url: './OrderAtYourSeat'
+      },
+      {
         name: 'Competitions',
         url: './Competitions'
       },
@@ -26,11 +30,7 @@ export class SidenavComponent {
       {
         name: 'Upcoming Matches',
         url: './Upcoming',
-      },
-      {
-        name: 'Food & Beverage',
-        url: './TODO'
-      }
+      }      
     ];
   }
 }

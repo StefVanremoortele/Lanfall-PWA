@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import {JsonpModule, Jsonp, Response} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from "./material/material.module";
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
@@ -13,6 +14,9 @@ import { CompetitionDetailsComponent } from "./components/competition-details/co
 import { NowPlayingComponent } from "./components/now-playing/now-playing.component";
 import { UpcomingGamesComponent } from "./components/upcoming-games/upcoming-games.component";
 import { HomeComponent } from "./components/home/home.component";
+import { OrderAtYourSeatComponent } from "./components/order-at-your-seat/order-at-your-seat.component";
+import { DrinksService } from "./services/drinks.service";
+
 
 
 @NgModule({
@@ -20,6 +24,7 @@ import { HomeComponent } from "./components/home/home.component";
     AppComponent,
     SidenavComponent,
     HomeComponent,
+    OrderAtYourSeatComponent,
     CompetitionDetailsComponent,
     NowPlayingComponent,
     UpcomingGamesComponent,
@@ -34,7 +39,7 @@ import { HomeComponent } from "./components/home/home.component";
     HttpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [DrinksService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
