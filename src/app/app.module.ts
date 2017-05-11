@@ -1,11 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {JsonpModule, Jsonp, Response} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from "./material/material.module";
-import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {NoopAnimationsModule, BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
@@ -28,7 +28,7 @@ import { DrinksService } from "./services/drinks.service";
     CompetitionDetailsComponent,
     NowPlayingComponent,
     UpcomingGamesComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     RouterModule,
@@ -37,7 +37,9 @@ import { DrinksService } from "./services/drinks.service";
     NoopAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [DrinksService],
   bootstrap: [AppComponent]
