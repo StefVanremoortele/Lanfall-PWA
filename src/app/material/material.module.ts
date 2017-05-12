@@ -24,7 +24,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FlexLayoutModule,
     MdSidenavModule,
     MdProgressSpinnerModule,
-    MdListModule,
+    MdListModule
   ],
   exports: [
     DatepickerModule,

@@ -15,8 +15,12 @@ import { NowPlayingComponent } from "./components/now-playing/now-playing.compon
 import { UpcomingGamesComponent } from "./components/upcoming-games/upcoming-games.component";
 import { HomeComponent } from "./components/home/home.component";
 import { OrderAtYourSeatComponent } from "./components/order-at-your-seat/order-at-your-seat.component";
-import { DrinksService } from "./services/drinks.service";
 
+import { DrinksService } from "./services/drinks.service";
+import { PlayersService } from "./services/players.service";
+
+import {PlayersVoteComponent} from "./components/players-vote/players-vote.component";
+import {PlayersListComponent} from "./components/players-list/players-list.component";
 
 
 @NgModule({
@@ -29,6 +33,8 @@ import { DrinksService } from "./services/drinks.service";
     NowPlayingComponent,
     UpcomingGamesComponent,
     NotFoundComponent,
+    PlayersListComponent,
+    PlayersVoteComponent
   ],
   imports: [
     RouterModule,
@@ -41,7 +47,7 @@ import { DrinksService } from "./services/drinks.service";
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [DrinksService],
+  providers: [DrinksService, PlayersService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

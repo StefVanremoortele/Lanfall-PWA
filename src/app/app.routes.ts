@@ -6,6 +6,9 @@ import {HomeComponent} from "./components/home/home.component";
 import {NowPlayingComponent} from "./components/now-playing/now-playing.component";
 import {UpcomingGamesComponent} from "./components/upcoming-games/upcoming-games.component";
 import {OrderAtYourSeatComponent} from "./components/order-at-your-seat/order-at-your-seat.component";
+import {PlayersVoteComponent} from "./components/players-vote/players-vote.component";
+import {PlayersListComponent} from "./components/players-list/players-list.component";
+
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
@@ -14,6 +17,8 @@ const appRoutes: Routes = [
   {path: 'Competitions', component: CompetitionDetailsComponent},
   {path: 'Now', component: NowPlayingComponent},
   {path: 'Upcoming', component: UpcomingGamesComponent},
+  {path: 'VotePlayers', component: PlayersVoteComponent},
+  {path: 'PlayersList', component: PlayersListComponent},
   {path: "**", component: NotFoundComponent,  }
 ];
 
