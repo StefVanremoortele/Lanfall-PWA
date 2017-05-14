@@ -51,5 +51,12 @@ Payment stays the same: pay cash @ delivery
 
 Run the project: <b>ng serve</b> 
 <hr/>
-#### TODO: A lot (read TODO.md)
+#### TODO: 
+
+- implement indexedDb
+- let users rate players
+- secure player rate component
+- implement QR code
+- fix competitions component
+
 <hr/>
