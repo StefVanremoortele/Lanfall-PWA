@@ -5,16 +5,32 @@ import { Player } from "../models/Player";
 
 @Injectable()
 export class PlayersService {
+    
+  private playerurl = "http://178.117.24.148:1336/players";
 
   constructor(private http: Http) {
+
+  }
+
+  getPlayer(id: number): Observable<Player> {
+    const url = `${this.playerurl}/${id}`;
+    return this.http.get(url)
+      .map(res=>res.json())
+      .catch(this.handleError);
   }
 
   getPlayers(): Observable<Player[]> {
-    return this.http
-      .get(`http://localhost:1336/players`, this.getRequestHeaders())
+    return this.http.get(`http://178.117.24.148:1336/players`, this.getRequestHeaders())
       .map(res=>res.json())
-      .catch(err => Observable.throw(err));
+      .catch(this.handleError);
   }
+
+  search(term: string): Observable<Player[]> {
+    return this.http
+      .get(`http://178.117.24.148:1336/players?firstname=${term}`)
+      .map((response) => response.json().data as Player[]);
+  }
+  
   
 
   public getRequestHeaders() {
@@ -24,4 +40,8 @@ export class PlayersService {
     return new RequestOptions({headers: headers});
   }
 
+  private handleError(error: any): Promise<any> {
+    console.error("error:", error);
+    return Promise.reject(error.message || error);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional, OnInit } from '@angular/core';
 import { Http } from "@angular/http";
 import { Player } from "../../models/Player";
 import { PlayersService } from "../../services/players.service";
@@ -8,7 +8,7 @@ import { PlayersService } from "../../services/players.service";
   templateUrl: './players-list.component.html',
   styleUrls: ['./players-list.component.scss']
 })
-export class PlayersListComponent {1
+export class PlayersListComponent implements OnInit{
 
   public hasError: any;
   public loading: boolean;
@@ -16,6 +16,7 @@ export class PlayersListComponent {1
   public players: Array<Player>;
 
   constructor(private _playersService: PlayersService) {
+    
   }
   
   
@@ -28,6 +29,7 @@ export class PlayersListComponent {1
     this.loading = true;
       this._playersService.getPlayers().subscribe(
         (res) => {
+          this.players = res;
           this.loading = false;
           this.hasError = false;
           console.log("Successfully fetched players");
@@ -41,8 +43,10 @@ export class PlayersListComponent {1
       );
       console.log(this.hasError);
   }
-  toggleDirection(){
-    console.log('toggling direction...');
-  }
+  
+  openDialog(){
+    console.log('opening dialog');
+    
+  }  
   
 }

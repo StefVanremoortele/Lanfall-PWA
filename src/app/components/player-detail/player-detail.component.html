@@ -1,0 +1,41 @@
+
+
+<div class="no-connection" *ngIf="!player && hasError">
+    <md-card>
+        <md-card-content>
+            <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work
+                offline.</p>
+        </md-card-content>
+    </md-card>
+</div>
+<div class="player-content" *ngIf="player && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <div class="player-detail" fxFlex.gt-sm="500" fxFlex.gt-md="500" fxFlex="500">
+
+        <!-- TODO: AVATAR -->
+        <md-card>            
+            
+            <md-toolbar color="primary">
+                <span>{{player.nickname}}</span>
+            </md-toolbar>
+
+            <md-card-header>
+                <div aligh="end">
+                <md-card-title-group>
+                    <img md-card-avatar src="./{{player.avatar}}">
+                    <md-card-title>{{player.firstname}} {{player.lastname}}</md-card-title>                   
+                </md-card-title-group>
+                 </div>
+            </md-card-header>
+            <md-card-content>
+                <p>Game: {{player.game}}</p>                
+                <p>Brains: {{player.ratings.brains}}<p>                        
+                <p>Talent: {{player.ratings.talent}}</p>      
+                <p>Repspect: {{player.ratings.respect}}</p>                  
+            </md-card-content>  
+        </md-card>     
+        
+    </div>
+</div>
+
+<!-- Page Loader -->
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>

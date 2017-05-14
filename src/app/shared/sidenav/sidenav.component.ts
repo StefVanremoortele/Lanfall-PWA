@@ -16,33 +16,17 @@ export class SidenavComponent {
         url: './Home'
       },
       {
-        name: 'Players List',
-        url: './PlayersList'
-      },
-      {
-        name: 'Vote Players',
-        url: './VotePlayers'
-      },
-      {
-        name: 'Order@Seat',
-        url: './OrderAtYourSeat'
-      },
-      {
         name: 'Competitions',
         url: './Competitions'
       },
       {
-        name: 'Now Playing',
-        url: './Now'
+        name: 'Playerslist',
+        url: './ListPlayers'
       },
       {
-        name: 'Upcoming Matches',
-        url: './Upcoming',
-      },
-      {
-        name: 'Tabs Demo',
-        url: './TabsDemo',
-      }        
+        name: 'Rate a Player',
+        url: './RatePlayers'
+      }
     ];
   }
 }

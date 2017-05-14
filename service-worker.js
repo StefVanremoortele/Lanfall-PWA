@@ -1,13 +1,18 @@
 //Cache polyfil to support cacheAPI in all browsers
 //importScripts('./cache-polyfill.js');
 
-var cacheName = 'LFv5.0-Cache-1.0';
+var cacheName = 'LF-Cache-1.0';
 
 //Files to save in cache
 var files = [
-  './*.js',
-  './*.json',
-  './*.png'
+  './',
+  './index.html?utm=homescreen', //SW treats query string as new request
+  'https://178.117.24.148:1336/players/*', //caching 3rd party content
+  './assets/images/lanfall_logo-482x270.png',,
+  './assets/icons/android-chrome-192x192.png',
+  './**.js',
+  './**.png',
+  './manifest.json'
 ];
 
 //Adding `install` event listener
