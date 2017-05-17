@@ -8,7 +8,10 @@ import {
   MdMenuModule,
   MdToolbarModule,
   MdSidenavModule,
-  MdProgressSpinnerModule
+  MdProgressSpinnerModule,
+  MdChipList,
+  MdProgressBarModule,
+  MdAutocompleteModule
 
 } from "@angular/material";
 import {FlexLayoutModule} from "@angular/flex-layout";
@@ -24,7 +27,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FlexLayoutModule,
     MdSidenavModule,
     MdProgressSpinnerModule,
-    MdListModule
+    MdProgressBarModule,
+    MdAutocompleteModule
   ],
   exports: [
     DatepickerModule,
@@ -35,9 +39,12 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdToolbarModule,
     FlexLayoutModule,
     MdSidenavModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule,
+    MdChipList,
+    MdProgressBarModule,
+    MdAutocompleteModule
   ],
-  declarations: []
+  declarations: [MdChipList]
 })
 export class MaterialModule {
 }

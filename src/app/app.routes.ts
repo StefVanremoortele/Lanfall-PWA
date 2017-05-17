@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   {path: 'Competitions', component: CompetitionDetailsComponent},
   {path: 'ListPlayers', component: PlayersListComponent},
   {path: 'RatePlayers', component: PlayersRateComponent},
-  {path: "player/:id", component: PlayerDetailComponent},  
+  {path: "player/:id", component: PlayerDetailComponent},
   {path: "**", component: NotFoundComponent}
 ];
 

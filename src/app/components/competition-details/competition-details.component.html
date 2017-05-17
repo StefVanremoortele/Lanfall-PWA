@@ -1,6 +1,52 @@
+<div class="no-connection" *ngIf="!competitions && hasError">
+  <md-card>
+    <md-card-content>
+      <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work offline.
+      </p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="competition-content" *ngIf="competitions && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+  <div class="test" fxFlex.gt-sm="67" fxFlex.gt-md="100" fxFlex="100" *ngFor="let competition of competitions">
+
+    <!-- TODO: AVATAR -->
+    <md-card>
+      <md-toolbar color="primary">
+        <span>{{competition.game}}</span>
+      </md-toolbar>
+      <md-card-header>
+        <md-card-title-group>
+          <md-card-title>Teams: {{competition.teams}}</md-card-title>
+        </md-card-title-group>
+      </md-card-header>
+      <md-card-content>
+        <p>Prizepool: {{competition.prizepool}}</p>
+        <p>First:</p>
+        <ul>
+          <li *ngFor="let prize of competition.prizes.first">{{prize}}</li>
+        </ul>
+        <p>Second:</p>
+        <ul>
+          <li *ngFor="let prize of competition.prizes.second">{{prize}}</li>
+        </ul>
+        <p>Third:</p>
+        <ul>
+          <li *ngFor="let prize of competition.prizes.third">{{prize}}</li>
+        </ul>
+      </md-card-content>
+    </md-card>
+
+  </div>
+</div>
 
 
 
+<!-- Page Loader -->
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>
+
+
+<!--
 <div class="demo-button">
   <section>
     <button md-icon-button>
@@ -103,3 +149,4 @@
     <button md-button>Last<md-icon>navigate_before</md-icon></button>
   </section>
 </div>
+-->

@@ -16,13 +16,14 @@ import { CompetitionDetailsComponent } from "./components/competition-details/co
 import { UpcomingGamesComponent } from "./components/upcoming-games/upcoming-games.component";
 import { HomeComponent } from "./components/home/home.component";
 //services
-import { DrinksService } from "./services/drinks.service";
+import { CompetitionsService } from "./services/competitions.service";
 import { PlayersService } from "./services/players.service";
 
 import {PlayersListComponent} from "./components/players-list/players-list.component";
 import {PlayersRateComponent} from "./components/players-rate/players-rate.component";
 import {PlayerDetailComponent} from "./components/player-detail/player-detail.component";
 
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import {PlayerDetailComponent} from "./components/player-detail/player-detail.co
     PlayersListComponent,
     PlayersRateComponent,
     PlayerDetailComponent
+
   ],
   imports: [
     RouterModule,
@@ -47,7 +49,7 @@ import {PlayerDetailComponent} from "./components/player-detail/player-detail.co
     BrowserAnimationsModule,
     CommonModule
   ],
-  providers: [DrinksService, PlayersService],
+  providers: [CompetitionsService, PlayersService],
   bootstrap: [AppComponent]
 })
 

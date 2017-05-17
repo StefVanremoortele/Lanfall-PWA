@@ -10,7 +10,7 @@ export class DrinksService {
 
   getDrinks(): Observable<any> {
     return this.http
-      .get(`http://localhost:1336/food`, this.getRequestHeaders())
+      .get(`http://178.117.24.148:1336/food`, this.getRequestHeaders())
       .map(res=>res.json())
       .catch(err => Observable.throw(err));
   }

@@ -1,10 +1,9 @@
-
-
 <div class="no-connection" *ngIf="!player && hasError">
     <md-card>
         <md-card-content>
             <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work
-                offline.</p>
+                offline.
+            </p>
         </md-card-content>
     </md-card>
 </div>
@@ -12,30 +11,49 @@
     <div class="player-detail" fxFlex.gt-sm="500" fxFlex.gt-md="500" fxFlex="500">
 
         <!-- TODO: AVATAR -->
-        <md-card>            
-            
+        <md-card>
             <md-toolbar color="primary">
                 <span>{{player.nickname}}</span>
             </md-toolbar>
 
             <md-card-header>
                 <div aligh="end">
-                <md-card-title-group>
-                    <img md-card-avatar src="./{{player.avatar}}">
-                    <md-card-title>{{player.firstname}} {{player.lastname}}</md-card-title>                   
-                </md-card-title-group>
-                 </div>
+                    <md-card-title-group>
+                        <img md-card-avatar src="./{{player.avatar}}">
+                        <md-card-title>{{player.firstname}} {{player.lastname}}</md-card-title>
+                    </md-card-title-group>
+                </div>
             </md-card-header>
             <md-card-content>
-                <p>Game: {{player.game}}</p>                
-                <p>Brains: {{player.ratings.brains}}<p>                        
-                <p>Talent: {{player.ratings.talent}}</p>      
-                <p>Repspect: {{player.ratings.respect}}</p>                  
-            </md-card-content>  
-        </md-card>     
-        
+                <p>Plays: {{player.game}}</p>
+                <p><< more info should come here >></p>
+            </md-card-content>
+            <md-card-content>
+                <section class="example-section">
+                    <p>Brains: {{player.ratings.brains}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.brains">
+                    </md-progress-bar>
+                </section>
+            </md-card-content>
+            <md-card-content>
+                <section class="example-section">
+                    <p>Talent: {{player.ratings.talent}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.talent">
+                    </md-progress-bar>
+                </section>
+            </md-card-content>
+            <md-card-content>
+                <section class="example-section">
+                    <p>Respect: {{player.ratings.respect}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.respect">
+                    </md-progress-bar>
+                </section>
+            </md-card-content>
+        </md-card>
     </div>
 </div>
-
+<div class="no-player-found" *ngIf="!player" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <h1>player not found</h1>
+</div>
 <!-- Page Loader -->
 <md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>

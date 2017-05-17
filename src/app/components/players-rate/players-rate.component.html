@@ -8,28 +8,18 @@
 </div>
 
 <div *ngIf="players && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="end">
-    <div fxFlex.gt-sm="67" fxFlex.gt-md="33" fxFlex="100" *ngFor="let player of players ">
+    <div fxFlex.gt-sm="67" fxFlex.gt-md="33" fxFlex="100" >
         
-        
-        <md-card class="player-content">
-                <div fx-layout="row" fx-flex fx-layout-align="end" >
-            <md-card-title-group>
-                <md-card-title>{{player.firstname | uppercase}}  {{player.nickname}} {{player.lastname | uppercase}}</md-card-title>
-            </md-card-title-group>
-            <md-card-content>
-                <p>Game: {{player.game}}</p>
-                <p>Rating</p>                
-            </md-card-content>
-            
-                </div>
-        </md-card>
+
+            <input mdInput placeholder="Choose Player" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+
+        <md-autocomplete #auto="mdAutocomplete">
+            <md-option *ngFor="let player of filteredPlayers | async" [value]="player">
+                {{ player }}
+            </md-option>
+        </md-autocomplete>
+
+
     </div>
 </div>
-
-<md-list dense>
-    <md-list-item *ngFor="let item of items">
-        {{item}}
-    </md-list-item>
-</md-list>
-
 <md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>

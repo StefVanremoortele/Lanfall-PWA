@@ -1,6 +1,6 @@
 import { Component, Optional, OnInit } from '@angular/core';
 import { Http } from "@angular/http";
-import { Player } from "../../models/Player";
+import { Player } from "../../models/Player"; 
 import { PlayersService } from "../../services/players.service";
 
 @Component({
