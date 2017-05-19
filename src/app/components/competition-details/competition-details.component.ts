@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompetitionsService } from "../../services/competitions.service";
-import { ActivatedRoute, Params } from "@angular/router";
+import { ActivatedRoute, Params, Router } from "@angular/router";
 import { Http } from "@angular/http";
 import { Competition } from "../../models/Competition";
 
@@ -13,36 +13,37 @@ export class CompetitionDetailsComponent implements OnInit{
 
   public hasError: any;
   public loading: boolean;
-  public competitions: Array<Competition>;
+  
+  public error: any;
+  public competitions: Competition[];
+  public selectedCompetition: Competition;
 
-  constructor(private _competitionsService: CompetitionsService ) {}
-
-  public ngOnInit(): void {
-    this.fetchCompos();    
-    console.log(this.competitions);
-  }
-
-  fetchCompos(){
-    this.loading = true;
-      this._competitionsService.getCompos().subscribe(
-        (res) => {
-          this.competitions = res;
-          this.loading = false;
-          this.hasError = false;
-          console.log("Successfully fetched competitions");
-          console.log(res)
-        },
-        () => {
-          this.hasError = true;
-          this.loading = false;        
-          console.log("error fetching competitions");
-        }
-      );
-      console.log(this.hasError);
-  }
-
-  showPrizePool(){
+  showNgFor = false;
+  
+   constructor(
+    private router: Router,
+    private competitionsService: CompetitionsService) {
     
+  }
+
+  getCompetitions(): void {
+    this.competitionsService
+      .getCompetitions()
+      .then(competitions => this.competitions = competitions)
+      .catch(error => this.competitions = error);
+  }
+
+
+  ngOnInit(): void {
+    this.getCompetitions();
+  }
+
+  onSelect(competition: Competition): void {
+    this.selectedCompetition = competition;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/competition', this.selectedCompetition.id]);
   }
 
 }

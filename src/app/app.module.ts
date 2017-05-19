@@ -13,7 +13,6 @@ import {routing} from "./app.routes";
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CompetitionDetailsComponent } from "./components/competition-details/competition-details.component";
-import { UpcomingGamesComponent } from "./components/upcoming-games/upcoming-games.component";
 import { HomeComponent } from "./components/home/home.component";
 //services
 import { CompetitionsService } from "./services/competitions.service";
@@ -23,6 +22,10 @@ import {PlayersListComponent} from "./components/players-list/players-list.compo
 import {PlayersRateComponent} from "./components/players-rate/players-rate.component";
 import {PlayerDetailComponent} from "./components/player-detail/player-detail.component";
 
+// in memory api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemPlayerService } from './services/in-memory-data.service';
+
   
 @NgModule({
   declarations: [
@@ -30,12 +33,10 @@ import {PlayerDetailComponent} from "./components/player-detail/player-detail.co
     SidenavComponent,
     HomeComponent,
     CompetitionDetailsComponent,
-    UpcomingGamesComponent,
     NotFoundComponent,
     PlayersListComponent,
     PlayersRateComponent,
     PlayerDetailComponent
-
   ],
   imports: [
     RouterModule,
@@ -47,9 +48,10 @@ import {PlayerDetailComponent} from "./components/player-detail/player-detail.co
     MaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    CommonModule
+    CommonModule,
+    InMemoryWebApiModule.forRoot(InMemPlayerService), // => angular-in-memory-api
   ],
-  providers: [CompetitionsService, PlayersService],
+  providers: [CompetitionsService, PlayersService ],
   bootstrap: [AppComponent]
 })
 

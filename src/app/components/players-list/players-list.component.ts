@@ -1,5 +1,6 @@
 import { Component, Optional, OnInit } from '@angular/core';
 import { Http } from "@angular/http";
+import { Router } from '@angular/router';
 import { Player } from "../../models/Player"; 
 import { PlayersService } from "../../services/players.service";
 
@@ -12,41 +13,36 @@ export class PlayersListComponent implements OnInit{
 
   public hasError: any;
   public loading: boolean;
+  public error: any;
+  public players: Player[];
+  public selectedPlayer: Player;
 
-  public players: Array<Player>;
-
-  constructor(private _playersService: PlayersService) {
+  showNgFor = false;
+  
+  constructor(
+    private router: Router,
+    private playerService: PlayersService) {
     
   }
-  
-  
-  public ngOnInit() {
-    this.fetchPlayers();  
-    console.log(this.players);
+
+  getPlayers(): void {
+    this.playerService
+      .getPlayers()
+      .then(players => this.players = players)
+      .catch(error => this.error = error);
   }
 
-  fetchPlayers(){
-    this.loading = true;
-      this._playersService.getPlayers().subscribe(
-        (res) => {
-          this.players = res;
-          this.loading = false;
-          this.hasError = false;
-          console.log("Successfully fetched players");
-          console.log(res)
-        },
-        () => {
-          this.hasError = true;
-          this.loading = false;        
-          console.log("error fetching players");
-        }
-      );
-      console.log(this.hasError);
+
+  ngOnInit(): void {
+    this.getPlayers();
   }
-  
-  openDialog(){
-    console.log('opening dialog');
-    
-  }  
+
+  onSelect(player: Player): void {
+    this.selectedPlayer = player;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/rate', this.selectedPlayer.id]);
+  }
   
 }

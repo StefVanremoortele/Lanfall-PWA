@@ -1,47 +1,84 @@
 import { Injectable } from '@angular/core';
-import {Http, RequestOptions, Headers} from "@angular/http";
+import {Http, RequestOptions, Headers, Response} from "@angular/http";
 import {Observable} from "rxjs/Rx";
 import { Player } from "../models/Player";
 
+import 'rxjs/add/operator/toPromise';
+
+
+
+
+
 @Injectable()
 export class PlayersService {
-    
-  private playerurl = "http://178.117.24.148:1336/players";
 
-  constructor(private http: Http) {
+  private playerUrl = "app/players";
 
-  }
+  constructor(private http: Http) { }
 
-  getPlayer(id: number): Observable<Player> {
-    const url = `${this.playerurl}/${id}`;
-    return this.http.get(url)
-      .map(res=>res.json())
-      .catch(this.handleError);
-  }
-
-  getPlayers(): Observable<Player[]> {
-    return this.http.get(`http://178.117.24.148:1336/players`, this.getRequestHeaders())
-      .map(res=>res.json())
-      .catch(this.handleError);
-  }
-
-  search(term: string): Observable<Player[]> {
+  getPlayers(): Promise<Array<Player>> {
     return this.http
-      .get(`http://178.117.24.148:1336/players?firstname=${term}`)
-      .map((response) => response.json().data as Player[]);
+      .get(this.playerUrl)
+      .toPromise()
+      .then((response) => {
+        return response.json().data as Player[];
+      })
+      .catch(this.handleError);
   }
-  
-  
 
-  public getRequestHeaders() {
-    const headers: Headers = new Headers();
+  getPlayer(id: number): Promise<Player> {
+    return this.getPlayers()
+      .then(players => players.find(player => player.id === id));
+  }
+
+  save(player: Player): Promise<Player> {
+    if (player.id) {
+      return this.put(player);
+    }
+    return this.post(player);
+  }
+
+  delete(player: Player): Promise<Response> {
+    const headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
-    return new RequestOptions({headers: headers});
+
+    const url = `${this.playerUrl}/${player.id}`;
+
+    return this.http
+      .delete(url, { headers: headers })
+      .toPromise()
+      .catch(this.handleError);
+  }
+
+  // Add new Player
+  private post(player: Player): Promise<Player> {
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+
+    return this.http
+      .post(this.playerUrl, JSON.stringify(player), { headers: headers })
+      .toPromise()
+      .then(res => res.json().data)
+      .catch(this.handleError);
+  }
+
+  // Update existing Player
+  private put(player: Player): Promise<Player> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    const url = `${this.playerUrl}/${player.id}`;
+
+    return this.http
+      .put(url, JSON.stringify(player), { headers: headers })
+      .toPromise()
+      .then(() => player)
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {
-    console.error("error:", error);
+    console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
 }
