@@ -22,6 +22,7 @@ import { PlayersService } from "./services/players.service";
 import {PlayersListComponent} from "./components/players-list/players-list.component";
 import {PlayersRateComponent} from "./components/players-rate/players-rate.component";
 import {PlayerDetailComponent} from "./components/player-detail/player-detail.component";
+import {PlayerSearchComponent} from "./components/player-search/player-search.component";
 
 // in memory api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -38,7 +39,8 @@ import { InMemPlayerService } from './services/in-memory-data.service';
     NotFoundComponent,
     PlayersListComponent,
     PlayersRateComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    PlayerSearchComponent
   ],
   imports: [
     RouterModule,

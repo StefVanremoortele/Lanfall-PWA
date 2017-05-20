@@ -7,26 +7,39 @@
     </md-card>
 </div>
 
-<div *ngIf="players && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="end">
+<div *ngIf="player && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="end">
     <div fxFlex.gt-sm="67" fxFlex.gt-md="33" fxFlex="100" >
         
 
         <!-- input field for playersearch -->
 
-        <input mdInput placeholder="Choose Player" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+        <h3>Top players</h3>
+        <div class="grid grid-pad">
+        <div *ngFor="let player of players" (click)="gotoDetail(player)" class="col-1-4">
+            <div class="module player">
+            <h4>{{player.nickname}}</h4>
+            </div>
+        </div>
+        </div>
+        <app-player-search></app-player-search>
 
-        <md-autocomplete #auto="mdAutocomplete">
-            <md-option >
-                test
-            </md-option>
-        </md-autocomplete>
 
         <!-- show md card of player -->
 
         <!-- show player rating (short) -->
 
         <!-- give option to rate player -->
-
+        <h1>rate this playerf</h1>
     </div>
 </div>
+<h3>Top players</h3>
+        <div class="grid grid-pad">
+        <div *ngFor="let player of players" (click)="gotoDetail(player)" class="col-1-4">
+            <div class="module player">
+            <h4>{{player.nickname}}</h4>
+            </div>
+        </div>
+        </div>
+        <app-player-search></app-player-search>
+        <h1>rate this playerf</h1>
 <md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>
