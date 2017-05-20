@@ -12,11 +12,11 @@ import 'rxjs/add/operator/map';
 
 
 @Component({
-  selector: 'app-players-rate',
-  templateUrl: './players-rate.component.html',
-  styleUrls: ['./players-rate.component.scss']
+  selector: 'app-rating',
+  templateUrl: './rating.component.html',
+  styleUrls: ['./rating.component.scss']
 })
-export class PlayersRateComponent {
+export class RatingComponent {
 
   public hasError: any;
   public loading: boolean;
@@ -31,8 +31,11 @@ export class PlayersRateComponent {
   
   ngOnInit(): void {
     this._playersService.getPlayers()
-      .then(players => this.players = players.slice(1, 5));
+      .then(players => this.players = players);
   }
-
+  gotoDetail(player: Player): void {
+    const link = ['/rate', player.id];
+    this.router.navigate(link);
+  }
 
 }

@@ -1,0 +1,35 @@
+<div class="no-connection" *ngIf="!players && hasError">
+    <md-card>
+        <md-card-content>
+            <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work
+                offline.</p>
+        </md-card-content>
+    </md-card>
+</div>
+
+<div *ngIf="players && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <div fxFlex.gt-sm="67" fxFlex.gt-md="33" fxFlex="100" >
+        
+
+        <!-- input field for playersearch -->
+        <app-player-search></app-player-search>
+
+        <!-- show md card of players w/ rating-->
+        <h3>Top players</h3>
+        <div class="grid grid-pad">
+            <div *ngFor="let player of players" (click)="gotoDetail(player)" class="col-1-4">
+                <div class="module player">
+                    <h4>{{player.nickname}}</h4>
+                    <p>rate this player</p>
+                </div>
+            </div>
+            
+            
+        </div>
+        <!-- give option to rate player -->
+
+    </div>
+</div>
+
+<!-- Page Loader -->
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>

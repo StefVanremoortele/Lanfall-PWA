@@ -6,6 +6,7 @@ export class Player {
   nickname:string;
   avatar:string;
   game:string;
-  ratings:JSON;
+  ratings:Array<JSON>;
+  rate_count:number;
 }
 

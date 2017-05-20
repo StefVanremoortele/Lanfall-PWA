@@ -66,7 +66,8 @@ export class InMemPlayerService implements InMemoryDbService {
 				"brains": 75,
 				"talent": 50,
 				"respect": 80
-			}
+			},
+			"rate_count": 13		
 		},
 		{
 			"id": 2,
@@ -80,7 +81,9 @@ export class InMemPlayerService implements InMemoryDbService {
 				"brains": 75,
 				"talent": 50,
 				"respect": 80
-			  }
+			  },
+			"rate_count": 13		
+			  
 		},
 		{
 			"id": 3,
@@ -94,7 +97,8 @@ export class InMemPlayerService implements InMemoryDbService {
 				"brains": 75,
 				"talent": 50,
 				"respect": 80
-			  }
+			  },
+			"rate_count": 13					  
 		},
 		{
 			"id": 4,
@@ -108,7 +112,9 @@ export class InMemPlayerService implements InMemoryDbService {
 				"brains": 75,
 				"talent": 50,
 				"respect": 80
-			  }
+			  },
+			"rate_count": 13		
+			  
 		},
 		{
 			"id": 5,
@@ -118,11 +124,14 @@ export class InMemPlayerService implements InMemoryDbService {
 			"avatar": "assets/images/avatars/photos/men/5.jpg",
 			"game": "CS:GO",
 			"team": "defusekids",			
-			"ratings": {
-				"brains": 75,
-				"talent": 50,
-				"respect": 80
-			  }
+			"ratings": [{
+				"brains": 75
+			},{
+				"talent": 75
+			},{
+				"respect": 75
+			}],
+			"rate_count": 13					  
 		},
 		{
 			"firstname": "Rachel",
@@ -131,11 +140,14 @@ export class InMemPlayerService implements InMemoryDbService {
 			"avatar": "assets/images/avatars/photos/men/6.jpg",
 			"game": "CS:GO",
 			"team": "defusekids",
-			"ratings": {
-				"brains": 75,
-				"talent": 50,
-				"respect": 80
-			  }
+			"ratings": [{
+				"brains": 75
+			},{
+				"talent": 75
+			},{
+				"respect": 75
+			}],
+			"rate_count": 13					  
 		},
 		{
 			"id": 6,
@@ -145,11 +157,14 @@ export class InMemPlayerService implements InMemoryDbService {
 			"avatar": "assets/images/avatars/photos/men/7.jpg",
 			"game": "FIFA17",
 			"team": "defusekids",			
-			"ratings": {
-				"brains": 75,
-				"talent": 50,
-				"respect": 80
-			}
+			"ratings": [{
+				"brains": 75
+			},{
+				"talent": 75
+			},{
+				"respect": 75
+			}],
+			"rate_count": 13					
 		},
 		{
 		
@@ -160,11 +175,14 @@ export class InMemPlayerService implements InMemoryDbService {
 			"avatar": "assets/images/avatars/photos/men/8.jpg",
 			"game": "CS:GO",
 			"team": "defusekids",			
-			"ratings": {
-				"brains": 75,
-				"talent": 50,
-				"respect": 80
-			}
+			"ratings": [{
+				"brains": 75
+			},{
+				"talent": 75
+			},{
+				"respect": 75
+			}],
+			"rate_count": 13					
 		},
 		{
 			"id": 8,
@@ -174,11 +192,14 @@ export class InMemPlayerService implements InMemoryDbService {
 			"avatar": "assets/images/avatars/photos/men/9.jpg",
 			"game": "CS:GO",
 			"team": "defusekids",			
-			"ratings": {
-				"brains": 75,
-				"talent": 50,
-				"respect": 80
-			}
+			"ratings": [{
+				"brains": 75
+			},{
+				"talent": 75
+			},{
+				"respect": 75
+			}],
+			"rate_count": 13					
 		},
 		{
 			"id": 9,
@@ -188,11 +209,14 @@ export class InMemPlayerService implements InMemoryDbService {
 			"avatar": "assets/images/avatars/photos/men/10.jpg",
 			"game": "FIFA17",
 			"team": "defusekids",			
-			"ratings": {
-				"brains": 75,
-				"talent": 50,
-				"respect": 80
-			}
+			"ratings": [{
+				"brains": 75
+			},{
+				"talent": 75
+			},{
+				"respect": 75
+			}],
+			"rate_count": 13					
 		}
 	]
   	
@@ -203,34 +227,34 @@ export class InMemPlayerService implements InMemoryDbService {
 		{
 			"id": 1,
 			"player_id": 1,
-		 	"ratings": 
+		 	"ratings": [
 			 {
 				"brains": 75,
 				"talent": 75,
 				"respect": 75
-			},
+			}],
 			"count": 13		 
 		 },
 		 {
 			"id": 2,
 			"player_id": 2,
-		 	"ratings": 
+		 	"ratings": [
 			 {
 				"brains": 88,
 				"talent": 76,
 				"respect": 92
-			},
+			}],
 			"count": 4		 
 		 },
 		 {
 			"id": 3,
 			"player_id": 3,
-		 	"ratings": 
+		 	"ratings": [
 			 {
 				"brains": 50,
 				"talent": 50,
 				"respect": 50
-			},
+			}],
 			"count": 13		 
 		 }
 	]

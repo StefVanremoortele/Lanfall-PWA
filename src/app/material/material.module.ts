@@ -10,7 +10,8 @@ import {
   MdProgressSpinnerModule,
   MdChipList,
   MdProgressBarModule,
-  MdAutocompleteModule
+  MdAutocompleteModule,
+  MdSlider
 
 } from "@angular/material";
 import {FlexLayoutModule} from "@angular/flex-layout";
@@ -39,9 +40,10 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdProgressSpinnerModule,
     MdChipList,
     MdProgressBarModule,
-    MdAutocompleteModule
+    MdAutocompleteModule,
+    MdSlider
   ],
-  declarations: [MdChipList]
+  declarations: [MdChipList, MdSlider]
 })
 export class MaterialModule {
 }

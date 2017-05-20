@@ -11,15 +11,28 @@
     <!-- place competition detail card here -->
     <md-card class="competition-detail">
       <md-card-header>
-        <div aligh="end">
+        <div align="center">
           <md-card-title-group>
-            <img md-card-avatar src="./{{competition.image_url}}">
-            <md-card-title>{{competition.game}}</md-card-title>
+            <img md-card-avatar src="./{{competition?.image_url}}">
+            <md-card-title>{{competition?.game}}</md-card-title>
           </md-card-title-group>
         </div>
       </md-card-header>
       <md-card-content>
-        <p>Under Construction</p>
+        <p><span>Teams</span>: {{competition?.teams}}</p>
+        <p><span>Prizepool</span>: {{competition?.prizepool}}</p>
+        <p><span>First:</span></p>
+        <ul>
+          <li *ngFor="let prize of competition?.prizes.first">{{prize}}</li>
+        </ul>
+        <p><span>Second</span>:</p>
+        <ul>
+          <li *ngFor="let prize of competition?.prizes.second">{{prize}}</li>
+        </ul>
+        <p><span>Third</span>:</p>
+        <ul>
+          <li *ngFor="let prize of competition?.prizes.third">{{prize}}</li>
+        </ul>
       </md-card-content>
     </md-card>
 </div>

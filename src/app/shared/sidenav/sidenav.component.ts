@@ -25,7 +25,7 @@ export class SidenavComponent {
       },
       {
         name: 'Rate a Player',
-        url: './RatePlayers'
+        url: './Ratings'
       }
     ];
   }
