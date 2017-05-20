@@ -7,43 +7,38 @@
   </md-card>
 </div>
 
-<div class="competition-content" *ngIf="competitions && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
-  <div class="test" fxFlex.gt-sm="67" fxFlex.gt-md="100" fxFlex="100" *ngFor="let competition of competitions">
-
-    <!-- TODO: AVATAR -->
-    <md-card>
-      <md-toolbar color="primary">
-        <span>{{competition.game}}</span>
-      </md-toolbar>
+<div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px" fxLayoutAlign="center center">
+    <!-- place competition detail card here -->
+    <md-card class="competition-detail">
       <md-card-header>
-        <md-card-title-group>
-          <md-card-title>Teams: {{competition.teams}}</md-card-title>
-        </md-card-title-group>
+        <div aligh="end">
+          <md-card-title-group>
+            <img md-card-avatar src="./{{competition.image_url}}">
+            <md-card-title>{{competition.game}}</md-card-title>
+          </md-card-title-group>
+        </div>
       </md-card-header>
       <md-card-content>
-        <p>Prizepool: {{competition.prizepool}}</p>
-        <p>First:</p>
-        <ul>
-          <li *ngFor="let prize of competition.prizes.first">{{prize}}</li>
-        </ul>
-        <p>Second:</p>
-        <ul>
-          <li *ngFor="let prize of competition.prizes.second">{{prize}}</li>
-        </ul>
-        <p>Third:</p>
-        <ul>
-          <li *ngFor="let prize of competition.prizes.third">{{prize}}</li>
-        </ul>
+        <p>Under Construction</p>
       </md-card-content>
     </md-card>
-
-  </div>
 </div>
-
 
 
 <!-- Page Loader -->
 <md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--

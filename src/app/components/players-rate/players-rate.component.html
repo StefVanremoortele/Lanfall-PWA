@@ -11,14 +11,21 @@
     <div fxFlex.gt-sm="67" fxFlex.gt-md="33" fxFlex="100" >
         
 
-            <input mdInput placeholder="Choose Player" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+        <!-- input field for playersearch -->
+
+        <input mdInput placeholder="Choose Player" [mdAutocomplete]="auto" [formControl]="stateCtrl">
 
         <md-autocomplete #auto="mdAutocomplete">
-            <md-option *ngFor="let player of filteredPlayers | async" [value]="player">
-                {{ player }}
+            <md-option >
+                test
             </md-option>
         </md-autocomplete>
 
+        <!-- show md card of player -->
+
+        <!-- show player rating (short) -->
+
+        <!-- give option to rate player -->
 
     </div>
 </div>

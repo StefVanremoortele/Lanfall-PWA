@@ -4,6 +4,7 @@ export class Competition {
   game:string;
   teams:number;
   prizepool:number;
+  image_url:string;
   prizes:JSON;
 }
 

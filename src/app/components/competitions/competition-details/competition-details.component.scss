@@ -1,0 +1,18 @@
+.competition-detail {
+  width: 300px;
+  padding: 20px;
+  p>span{
+    font-weight: bolder;
+  }
+  button{
+    float: right;
+  }
+}
+
+.competition-detail img {
+  background-size: cover;
+}
+
+.competition-detail md-card-title{
+  font-weight: bolder;
+}

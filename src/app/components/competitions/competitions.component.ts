@@ -5,11 +5,11 @@ import { Http } from "@angular/http";
 import { Competition } from "../../models/Competition";
 
 @Component({
-  selector: 'app-competition-details',
-  templateUrl: './competition-details.component.html',
-  styleUrls: ['./competition-details.component.scss']
+  selector: 'app-competitions',
+  templateUrl: './competitions.component.html',
+  styleUrls: ['./competitions.component.scss']
 })
-export class CompetitionDetailsComponent implements OnInit{
+export class CompetitionsComponent implements OnInit{
 
   public hasError: any;
   public loading: boolean;

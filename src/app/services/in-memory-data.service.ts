@@ -9,6 +9,7 @@ export class InMemPlayerService implements InMemoryDbService {
 			"game": "CS:GO",
 			"teams": 16,
 			"prizepool": 1000,
+			"image_url": "assets/icons/competitions/csgo.png",
 			"prizes": {
 				"first": [
 					"5 x Siberia 350",
@@ -31,6 +32,7 @@ export class InMemPlayerService implements InMemoryDbService {
 			"game": "FIFA17",
 			"teams": 14,
 			"prizepool": 500,
+			"image_url": "assets/icons/competitions/fifa17.png",
 			"prizes": {
 				"first": [
 					"5 x Intel i7",
@@ -57,8 +59,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Teresa",
 			"lastname": "Denard",
 			"nickname": "NWaldman",
-			"avatar": "src/assets/images/avatars/photos/men/1.jpg",
+			"avatar": "assets/images/avatars/photos/men/1.jpg",
 			"game": "CS:GO",
+			"team": "defusekids",
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -70,8 +73,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Edward",
 			"lastname": "Tierney",
 			"nickname": "GRoethlisberger",
-			"avatar": "src/assets/images/avatars/photos/men/2.jpg",
+			"avatar": "assets/images/avatars/photos/men/2.jpg",
 			"game": "FIFA17",
+			"team": "defusekids",
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -83,8 +87,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Stella",
 			"lastname": "Douglas",
 			"nickname": "RLyden",
-			"avatar": "src/assets/images/avatars/photos/men/3.jpg",
+			"avatar": "assets/images/avatars/photos/men/3.jpg",
 			"game": "CS:GO",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -96,8 +101,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Deirdre",
 			"lastname": "Frederick",
 			"nickname": "EStacy",
-			"avatar": "src/assets/images/avatars/photos/men/4.jpg",
+			"avatar": "assets/images/avatars/photos/men/4.jpg",
 			"game": "FIFA17",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -109,8 +115,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Robbie",
 			"lastname": "Morgan",
 			"nickname": "CJackson",
-			"avatar": "src/assets/images/avatars/photos/men/5.jpg",
+			"avatar": "assets/images/avatars/photos/men/5.jpg",
 			"game": "CS:GO",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -121,8 +128,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Rachel",
 			"lastname": "Peszynski",
 			"nickname": "ARadinsky",
-			"avatar": "src/assets/images/avatars/photos/men/6.jpg",
+			"avatar": "assets/images/avatars/photos/men/6.jpg",
 			"game": "CS:GO",
+			"team": "defusekids",
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -134,8 +142,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Haidi",
 			"lastname": "Szymanski",
 			"nickname": "ACovel",
-			"avatar": "src/assets/images/avatars/photos/men/7.jpg",
+			"avatar": "assets/images/avatars/photos/men/7.jpg",
 			"game": "FIFA17",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -148,8 +157,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Charlotte",
 			"lastname": "Dedonato",
 			"nickname": "MVicari",
-			"avatar": "src/assets/images/avatars/photos/men/8.jpg",
+			"avatar": "assets/images/avatars/photos/men/8.jpg",
 			"game": "CS:GO",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -161,8 +171,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Sherrell",
 			"lastname": "Tippetts",
 			"nickname": "SSherman",
-			"avatar": "src/assets/images/avatars/photos/men/9.jpg",
+			"avatar": "assets/images/avatars/photos/men/9.jpg",
 			"game": "CS:GO",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,
@@ -174,8 +185,9 @@ export class InMemPlayerService implements InMemoryDbService {
 			"firstname": "Melody",
 			"lastname": "Budgell",
 			"nickname": "BBessko",
-			"avatar": "src/assets/images/avatars/photos/men/10.jpg",
+			"avatar": "assets/images/avatars/photos/men/10.jpg",
 			"game": "FIFA17",
+			"team": "defusekids",			
 			"ratings": {
 				"brains": 75,
 				"talent": 50,

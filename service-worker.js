@@ -1,7 +1,7 @@
 //Cache polyfil to support cacheAPI in all browsers
 //importScripts('./cache-polyfill.js');
 
-var cacheName = 'LF-Cache-1.0';
+var cacheName = 'LF-Cache-1.2';
 
 //Files to save in cache
 var files = [

@@ -12,7 +12,8 @@ import {routing} from "./app.routes";
 //components
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { CompetitionDetailsComponent } from "./components/competition-details/competition-details.component";
+import { CompetitionDetailsComponent } from "./components/competitions/competition-details/competition-details.component";
+import { CompetitionsComponent } from "./components/competitions/competitions.component";
 import { HomeComponent } from "./components/home/home.component";
 //services
 import { CompetitionsService } from "./services/competitions.service";
@@ -33,6 +34,7 @@ import { InMemPlayerService } from './services/in-memory-data.service';
     SidenavComponent,
     HomeComponent,
     CompetitionDetailsComponent,
+    CompetitionsComponent,
     NotFoundComponent,
     PlayersListComponent,
     PlayersRateComponent,
