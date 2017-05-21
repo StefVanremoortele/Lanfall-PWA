@@ -123,9 +123,10 @@ Payment stays the same: pay cash @ delivery
 <p align="center"><b>Versions</b></p>
 
 <hr/>
-<div  align="center>
+<div  align="center">
+
   **NAME:**    | NodeJS | TypeScript | Angular CLI | Angular | Angular Material
   ------------ | ------ | ---------- | ----------- | ------- | ----------------
   **VERSION:** | `6.10.3`  | `2.2`      | `1.0.0`       | `4.0`   | `2.0.0-beta3`
-  
+
 </div>
