@@ -82,6 +82,7 @@ Payment stays the same: pay cash @ delivery
 <p align="center"><b>What's still under construction?</b></p>
 <hr/>
 
+- i've setup the ajax functions in player service but haven't had the time to add functionalities that uses them
 - implement indexedDb
 - secure player rate component
 - implement QR code
@@ -93,7 +94,7 @@ Payment stays the same: pay cash @ delivery
 
 <hr/>
 
-<b>Material:</b> by using material2 for this app I learned it's eazy to give a nice mobile look to your html
+<b>Material:</b> by using material2 together with angular flex layout I've learned it's eazy to give a nice mobile look to your app
 
 <b>Service Worker, sw toolbox, sw precache:</b> gives a nice offline experience. Kind of contests with native apps.
 
@@ -117,3 +118,12 @@ Payment stays the same: pay cash @ delivery
 <b>npm:</b> By having some trouble (<b>read: enormous amounts of trouble</b>) with different angular and material versions, I now have more control of npm.
 
 
+<hr/>
+
+<p align="center"><b>Versions</b></p>
+
+<hr/>
+
+  **NAME:**    | NodeJS | TypeScript | Angular CLI | Angular | Angular Material
+  ------------ | ------ | ---------- | ----------- | ------- | ----------------
+  **VERSION:** | `6.10.3`  | `2.2`      | `1.0.0`       | `4.0`   | `2.0.0-beta3`

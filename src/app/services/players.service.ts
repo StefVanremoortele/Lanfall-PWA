@@ -4,9 +4,9 @@ import {Observable} from "rxjs/Rx";
 import { Player } from "../models/Player";
 
 import 'rxjs/add/operator/toPromise';
-
-
-
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 
 @Injectable()
@@ -29,6 +29,16 @@ export class PlayersService {
   getPlayer(id: number): Promise<Player> {
     return this.getPlayers()
       .then(players => players.find(player => player.id === id));
+  }
+
+  search(term: string): Observable<Player[]> {
+    return this.http
+      .get(`app/players?nickname=${term}`)
+      .map((r: Response) => r.json().data as Player[])
+      .catch((error: any) => {
+          console.error('An friendly error occurred', error);
+          return Observable.throw(error.message || error);
+      });
   }
 
   save(player: Player): Promise<Player> {

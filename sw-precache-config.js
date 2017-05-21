@@ -10,9 +10,7 @@ module.exports = {
   stripPrefix: 'dist/',
   navigateFallback: '/index.html',
   runtimeCaching: [
-    {
-       
-    }
+    
   ]
 };
 
