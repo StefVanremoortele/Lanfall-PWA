@@ -1,18 +1,14 @@
 //Cache polyfil to support cacheAPI in all browsers
 //importScripts('./cache-polyfill.js');
 
-var cacheName = 'LF-Cache-1.2';
+var cacheName = 'LF-Cache-1.4';
 
 //Files to save in cache
 var files = [
   './',
-  './index.html?utm=homescreen', //SW treats query string as new request
-  'https://178.117.24.148:1336/players/*', //caching 3rd party content
-  './assets/images/lanfall_logo-482x270.png',,
-  './assets/icons/android-chrome-192x192.png',
-  './**.js',
-  './**.png',
-  './manifest.json'
+  './favicon.ico',
+  './index.html?utm=homescreen', 
+  './manifest.json'  
 ];
 
 //Adding `install` event listener
@@ -45,7 +41,7 @@ self.addEventListener('fetch', (event) => {
 
   var request = event.request;
 
-  //Tell the browser to wait for newtwork request and respond with below
+  //Tell the browser to wait for network request and respond with below
   event.respondWith(
     //If request is already in cache, return it
     caches.match(request).then((response) => {
@@ -74,11 +70,7 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-/*
-  ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
-*/
 
-//Adding `activate` event listener
 self.addEventListener('activate', (event) => {
   console.info('Event: Activate');
 
@@ -101,7 +93,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cache) => {
           if (cache !== cacheName) {
-            return caches.delete(cache); //Deleting the old cache (cache v1)
+            return caches.delete(cache); //Deleting the old cache 
           }
         })
       );

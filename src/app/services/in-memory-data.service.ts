@@ -10,6 +10,7 @@ export class InMemPlayerService implements InMemoryDbService {
 			"teams": 16,
 			"prizepool": 1000,
 			"image_url": "assets/icons/competitions/csgo.png",
+			"description": "Play CS:GO with your team of 5 and try to beat every team in the league..",
 			"prizes": {
 				"first": [
 					"5 x Siberia 350",
@@ -33,6 +34,7 @@ export class InMemPlayerService implements InMemoryDbService {
 			"teams": 14,
 			"prizepool": 500,
 			"image_url": "assets/icons/competitions/fifa17.png",
+			"description": "Experience complete innovation in FIFA 17 gameplay as it puts you in control of every moment on the pitch.",
 			"prizes": {
 				"first": [
 					"5 x Intel i7",
@@ -50,7 +52,57 @@ export class InMemPlayerService implements InMemoryDbService {
 					"1 x EUR 500"
 				]
 			}
-		}				
+		},
+		{
+			"id": 3,
+			"game": "Rocket League",
+			"teams": 14,
+			"prizepool": 500,
+			"image_url": "assets/icons/competitions/rocket-league.png",
+			"description": "Play CS:GO with your team of 5 and try to beat every team in the league..",
+			"prizes": {
+				"first": [
+					"5 x Intel i7",
+					"3 x Corsair 750W",
+					"1 x EUR 100"
+					],
+				"second": [
+					"5 x Siberia 350",
+					"3 x steelseries rival 100",
+					"1 x EUR 200"
+					],
+				"third": [
+					"5 x Siberia 350",
+					"3 x steelseries rival 100",
+					"1 x EUR 500"
+				]
+			}
+		},
+		{
+			"id": 4,
+			"game": "Unreal Tournament",
+			"teams": 14,
+			"prizepool": 500,
+			"image_url": "assets/icons/competitions/unreal-tournament.png",
+			"description": "Play CS:GO with your team of 5 and try to beat every team in the league..",
+			"prizes": {
+				"first": [
+					"5 x Intel i7",
+					"3 x Corsair 750W",
+					"1 x EUR 100"
+					],
+				"second": [
+					"5 x Siberia 350",
+					"3 x steelseries rival 100",
+					"1 x EUR 200"
+					],
+				"third": [
+					"5 x Siberia 350",
+					"3 x steelseries rival 100",
+					"1 x EUR 500"
+				]
+			}
+		}			
 	]
 
     const players = [

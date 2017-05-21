@@ -16,9 +16,11 @@ export class PlayersListComponent implements OnInit{
   public error: any;
   public players: Player[];
   public selectedPlayer: Player;
-
+  public offlineImage:string = './assets/images/avatars/no-picture.png';
+  
   showNgFor = false;
   
+
   constructor(
     private router: Router,
     private playerService: PlayersService) {
