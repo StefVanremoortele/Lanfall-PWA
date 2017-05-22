@@ -3,6 +3,8 @@ module.exports = {
     'dist/**.html',
     'dist/**.js',
     'dist/**.css',
+    'dist/**.jpg',
+    'dist/**.png',
     'dist/assets/images/*',
     'dist/assets/icons/*'
   ],
@@ -10,18 +12,11 @@ module.exports = {
   stripPrefix: 'dist/',
   navigateFallback: '/index.html',
   runtimeCaching: [
-    
+    {
+      urlPattern: /app\/players\//,
+      handler: 'networkFirst'
+    }
   ]
 };
 
 
-/*
-staticFileGlobs.bak
-
-    'dist/**.html',
-    'dist/**.js',
-    'dist/**.css',
-    'dist/assets/images/*',
-    'dist/assets/icons/*'
-
-    */

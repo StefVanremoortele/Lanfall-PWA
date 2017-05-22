@@ -15,7 +15,7 @@ export class CompetitionsComponent implements OnInit{
   public loading: boolean;
   
   public error: any;
-  public competitions: Competition[];
+  public competitions: Competition[];  
   public selectedCompetition: Competition;
 
   showNgFor = false;

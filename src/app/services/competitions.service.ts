@@ -18,12 +18,11 @@ export class CompetitionsService {
       })
       .catch(this.handleError);
   }
-
+  
   getCompetition(id: number): Promise<Competition> {
     return this.getCompetitions()
       .then(competitions => competitions.find(competition => competition.id === id));
   }
-
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
