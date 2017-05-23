@@ -1,53 +1,77 @@
-
-
 <div class="no-connection" *ngIf="!player && hasError">
-    <md-card>
-        <md-card-content>
-            <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work
-                offline.</p>
-        </md-card-content>
-    </md-card>
+  <md-card>    
+    <div class="picture-wrapper">
+      <img class="no-connection-image" md-card-image src="../../../assets/images/no-connection.png">
+    </div>
+    <md-card-content>
+      <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work offline.
+      </p>
+    </md-card-content>
+  </md-card>
 </div>
 
-<div class="player-content" *ngIf="player && !loading" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+<div class="no-player-found" *ngIf="player && hasError">
+  <md-card>    
+    <div class="picture-wrapper">
+      <img class="no-connection-image" md-card-image src="../../../assets/images/no-avatar.png">
+    </div>
+    <md-card-content>
+      <p>No player found
+      </p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="player-content" *ngIf="player && !hasError " fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
     <div class="player-detail" fxFlex.gt-sm="500" fxFlex.gt-md="500" fxFlex="500">
+      <div *ngIf="player">
+        <h2>{{player.nickname}} details!</h2>
+        <div>
+          <label>id: </label>{{player.id}}</div>
+        <div>
+          <label>name: </label>
+          <input [(ngModel)]="player.nickname" placeholder="name" />
+        </div>
+        <button (click)="goBack()">Back</button>
+        <button (click)="save()">Save</button>
+      </div>
 
         <!-- TODO: AVATAR -->
         <md-card>
             <md-toolbar id="toolbar" color="primary">
-                <span>{{player.nickname}}</span>
+                <span>{{player['nickname']}}</span>
             </md-toolbar>
 
             <md-card-header>
                 <div aligh="end">
                     <md-card-title-group>
-                        <img md-card-avatar src="./{{player.avatar}}">
-                        <md-card-title>{{player.firstname}} {{player.lastname}}</md-card-title>
+                        <img md-card-avatar src="./{{player['avatar']}}">
+                        <md-card-title>{{player['lastname']}} {{player['firstname']}}</md-card-title>
                     </md-card-title-group>
                 </div>
             </md-card-header>
             <md-card-content>
-                <p>Plays: {{player.game}}</p>
-                <p>Team: {{player.team}}</p>
+                <p>Plays: {{player['game']}}</p>
+                <p>Team: {{player['team']}}</p>
             </md-card-content>
             <md-card-content>
                 <section class="example-section">
-                    <p>Brains: {{player.ratings.brains}}</p>
-                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.brains">
+                    <p>Brains: {{player}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player">
                     </md-progress-bar>
                 </section>
             </md-card-content>
             <md-card-content>
                 <section class="example-section">
-                    <p>Talent: {{player.ratings.talent}}</p>
-                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.talent">
+                    <p>Talent: {{player}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player">
                     </md-progress-bar>
                 </section>
             </md-card-content>
             <md-card-content>
                 <section class="example-section">
-                    <p>Respect: {{player.ratings.respect}}</p>
-                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.respect">
+                    <p>Respect: {{player}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player">
                     </md-progress-bar>
                 </section>
             </md-card-content>
@@ -57,3 +81,121 @@
 
 <!-- Page Loader -->
 <md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="demo-button">
+  <section>
+    <button md-icon-button>
+      <md-icon class="">more_vert</md-icon>
+    </button>
+</section>
+<section>
+    <a href="http://www.google.com" md-button color="primary">SEARCH</a>
+    <a href="http://www.google.com" md-raised-button>SEARCH</a>
+    <a href="http://www.google.com" md-fab>
+      <md-icon class="md-24">check</md-icon>
+    </a>
+    <a href="http://www.google.com" md-mini-fab>
+      <md-icon class="md-24">check</md-icon>
+    </a>
+  </section>
+  
+  
+  <section>
+    <button md-button color="primary">primary</button>
+    <button md-button color="accent">accent</button>
+    <button md-button color="warn">warn</button>
+  </section>
+
+  <section>
+    <button md-raised-button color="primary">primary</button>
+    <button md-raised-button color="accent">accent</button>
+    <button md-raised-button color="warn">warn</button>
+  </section>
+
+  <section>
+    <button md-fab color="primary">
+      <md-icon class="md-24">home</md-icon>
+    </button>
+    <button md-fab color="accent">
+      <md-icon class="md-24">favorite</md-icon>
+    </button>
+    <button md-fab color="warn">
+      <md-icon class="md-24">feedback</md-icon>
+    </button>
+  </section>
+
+  <section>
+    <button md-icon-button color="primary">
+      <md-icon class="md-24">menu</md-icon>
+    </button>
+
+    <button md-icon-button color="accent">
+      <md-icon class="md-24">favorite</md-icon>
+    </button>
+
+    <button md-icon-button>
+      <md-icon class="md-24">more_vert</md-icon>
+    </button>
+</section>
+
+  <section>
+    <div layout="row" layout-sm="column">
+
+  <div flex>
+      <p>isDisabled: {{isDisabled}}, clickCounter: <span>{{clickCounter}}</span></p>
+      <button md-raised-button (click)="isDisabled=!isDisabled">
+        Disable buttons
+      </button>
+      <button md-raised-button (click)="button1.focus()">Focus 1</button>
+      <button md-raised-button (click)="button2.focus()">Focus 2</button>
+      <button md-raised-button (click)="button3.focus()">Focus 3</button>
+    </div>
+    </div>
+    <button md-button #button1 [disabled]="isDisabled" (click)="clickCounter=clickCounter+1">off</button>
+    <button md-button color="primary" [disabled]="isDisabled">off</button>
+    <a href="http://www.google.com" #button2 md-button color="accent" [disabled]="isDisabled">off</a>
+    <button md-raised-button #button3 color="primary" [disabled]="isDisabled">off</button>
+    <button md-mini-fab [disabled]="isDisabled">
+      <md-icon class="md-24">check</md-icon>
+    </button>
+
+    <button md-icon-button color="accent" [disabled]="isDisabled">
+      <md-icon class="md-24">favorite</md-icon>
+    </button>
+  </section>
+  <section>
+    <a href="http://www.google.com" md-button color="primary">SEARCH</a>
+    <button md-button>DANCE</button>
+  </section>
+  <section>
+    <a href="http://www.google.com" md-raised-button color="primary">SEARCH</a>
+    <button md-raised-button>DANCE</button>
+  </section>
+  <section>
+    <button md-raised-button>More<md-icon>more_vert</md-icon></button>
+    <button md-raised-button>Check<md-icon>check</md-icon></button>
+    <button md-raised-button>Check<md-icon class="md-24">favorite</md-icon></button>
+    <button md-raised-button>Last<md-icon>navigate_before</md-icon></button>
+  </section>
+  <section>
+    <button md-button>More<md-icon>more_vert</md-icon></button>
+    <button md-button>Check<md-icon>check</md-icon></button>
+    <button md-button>Check<md-icon class="md-24">favorite</md-icon></button>
+    <button md-button>Last<md-icon>navigate_before</md-icon></button>
+  </section>
+</div>
+-->

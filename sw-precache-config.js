@@ -3,8 +3,6 @@ module.exports = {
     'dist/**.html',
     'dist/**.js',
     'dist/**.css',
-    'dist/**.jpg',
-    'dist/**.png',
     'dist/assets/images/*',
     'dist/assets/icons/*'
   ],
@@ -13,10 +11,12 @@ module.exports = {
   navigateFallback: '/index.html',
   runtimeCaching: [
     {
-      urlPattern: /app\/players\//,
+      urlPattern: /178\\.117\\.24\\.148\\:1337\/competitions/,
+      handler: 'networkFirst'
+    },
+    {
+      urlPattern: /178\\.117\\.24\\.148\\:1337\/players/,
       handler: 'networkFirst'
     }
   ]
 };
-
-

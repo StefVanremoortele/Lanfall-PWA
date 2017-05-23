@@ -5,30 +5,29 @@
   <title>Lanfall Progressive Web App</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Material+Icons" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#083951">
-  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
 </head>
 <body>
-
-  <!-- APP MAIN -->
+  <!-- APP main -->
   <app-root>
     <div class="loading"></div>
   </app-root>
-  
   <!-- JAVASCRIPT NEEDS TO BE ENABLED -->
-  <noscript>
-    <h4 style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica;">
-      Sorry, JavaScript needs to be enabled in order to run this application.
-    </h4>
-  </noscript>
-
+    <noscript>
+      <h4 style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica;">
+        Sorry, JavaScript needs to be enabled in order to run this application.
+      </h4>
+    </noscript>
   <!-- service worker -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
       }).catch(function(err) {
@@ -37,6 +36,5 @@
       });
     }
   </script>
-
 </body>
 </html>

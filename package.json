@@ -1,7 +1,7 @@
 {
   "name": "lanfall-pwa",
-  "version": "0.0.0",
-  "description": "lanfallv5.0 Progressive Web App",
+  "version": "1.0.0",
+  "description": "lanfall Progressive Web App",
   "license": "",
   "scripts": {
     "ng": "ng",
@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "precache": "sw-precache --verbose  --config=sw-precache-config.js",
     "static-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html",
-    "stef-vanremoortele": "ng serve --port 1337 --host 0.0.0.0"
+    "fix-sw": "copy dist/service-worker.js ."
+    
   },
   "private": true,
   "dependencies": {

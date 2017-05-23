@@ -3,13 +3,13 @@
   "short_name": "Lanfallv5.0",
   "icons": [
     {
-      "src": "./assets/icons/favicon-192x192.png",
+      "src": "./assets/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image\/png"
     },
     {
-      "src": "./assets/images/lanfall_logo-482x270.png",
-      "sizes": "482x270",
+      "src": "./assets/icons/apple-touch-icon.png",
+      "sizes": "192x192",
       "type": "image\/png"
     },
     {
@@ -23,7 +23,17 @@
       "type": "icon"
     },
     {
-      "src": "./assets/images/avatars/no-picture.png",
+      "src": "./assets/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "icon"
+    },
+    {
+      "src": "./assets/images/no-avatar.png",
+      "sizes": "300x300",
+      "type": "image\/png"
+    },
+    {
+      "src": "./assets/images/no-connection.png",
       "sizes": "300x300",
       "type": "image\/png"
     }
