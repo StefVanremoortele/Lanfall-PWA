@@ -1,4 +1,4 @@
-html {
+html{
   height: 100%;
   width: 100%;
 }
@@ -26,15 +26,15 @@ body {
 }
 .loading::after {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  content: 'LOADING';
+  content: 'Loading Lanfall PWA';
   text-align: center;
   white-space: pre;
   font-weight: normal;
   font-size: 24px;
-  letter-spacing: 0.04rem;
-  color: #000;
+  letter-spacing: 0.06rem;
+  color: #083951;
   opacity: 0.8;
-  animation: animation 1s alternate infinite;
+  animation: animation 2s alternate infinite;
 }
 @keyframes animation {
   to { opacity: 0.2; }
@@ -90,21 +90,7 @@ md-sidenav.sidenav-panel {
     min-width: 15rem;
   }
 }
-md-card {
-  .picture-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .beers-image {
-      height: 200px;
-      width: auto;
-    }
-    .nasa-image{
-      height: 250px;
-      width: auto;
-    }
-  }
-}
+
 .no-connection {
   margin-top: 120px;
   text-align: center;
@@ -112,6 +98,17 @@ md-card {
     height: 200px;
     width: auto;
   }
+}
+#toolbar {
+  background-color: #083951;
+}
+
+md-toolbar{
+  background-color: #083951;
+}
+
+.mat-toolbar-row{
+  background-color: #083951;
 }
 md-card {
   padding: 0;
@@ -123,4 +120,7 @@ md-card {
 }
 .wrapper{
   background: white!important;
+}
+.primary{
+  background-color: #083951;
 }

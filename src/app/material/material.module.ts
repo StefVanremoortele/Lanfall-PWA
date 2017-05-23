@@ -7,7 +7,8 @@ import {
   MdMenuModule,
   MdToolbarModule,
   MdSidenavModule,
-  MdProgressSpinnerModule
+  MdProgressSpinnerModule,
+  MdProgressBarModule
 
 } from "@angular/material";
 import {FlexLayoutModule} from "@angular/flex-layout";
@@ -22,7 +23,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     FlexLayoutModule,
     MdSidenavModule,
     MdProgressSpinnerModule,
-    MdListModule
+    MdListModule,
+    MdProgressBarModule
   ],
   exports: [
     MdListModule,
@@ -32,7 +34,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdToolbarModule,
     FlexLayoutModule,
     MdSidenavModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule,
+    MdProgressBarModule
   ],
   declarations: []
 })

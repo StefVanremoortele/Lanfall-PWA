@@ -1,0 +1,25 @@
+
+<!-- you'll always see this -->
+
+
+
+<!-- you'll see this when no connection (read: observable becomes error) -->
+<div class="wrapper" *ngIf="hasError && !loading" class="no-connection">
+  <md-card>
+    <div class="picture-wrapper">
+      <img src="../../../assets/images/no-connection.png">
+    </div>
+    <md-card-content>
+      <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work offline.</p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<!-- you'll see this when sucessfully fetched -->
+<my-player-search></my-player-search>
+
+<!-- you'll see theres when there are no players -->
+
+<!-- you'll see this when the page is still loading -->
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"> </md-progress-spinner>
+

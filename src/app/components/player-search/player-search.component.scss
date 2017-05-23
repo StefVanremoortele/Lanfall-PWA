@@ -1,0 +1,40 @@
+
+#search-box{
+  width: 200px;
+  height: 20px;
+  border: 1px solid lightgray;
+}
+
+
+.player-content {
+    padding: 20px
+    
+}
+
+.player-content md-card{
+    margin:15px;
+    display: block;
+    padding: 20px;
+}
+.player-content md-card-header{
+  display: inline;
+}
+.player-content md-card img{
+  width: 85px;
+  height: 85px;
+  display: inline;
+  float: right;
+}
+
+.player-content md-card-title{
+    font-weight: bolder;
+    font-size: 22px;
+    display:block;
+}
+.player-content md-card-subtitle{
+    font-weight: bolder;
+    font-size: 14px;
+}
+.player-content md-card-content{
+    font-size: 14px;
+}

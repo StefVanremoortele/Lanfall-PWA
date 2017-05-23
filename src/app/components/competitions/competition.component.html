@@ -1,0 +1,35 @@
+
+
+<div class="wrapper" *ngIf="!competitions && !hasError" class="no-connection">
+  <md-card>
+    <div class="picture-wrapper">
+      <img class="no-connection-image" md-card-image src="../../../assets/images/no-connection.png">
+    </div>
+    <md-card-content>
+      <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work offline.</p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+  <md-card class="competition-detail" *ngFor="let competition of competitions">
+    <md-card-header>
+      <div md-card-avatar class="example-header-image"></div>
+      
+        <img md-card-image  src="{{competition['image_url']}}">
+    </md-card-header>
+    <md-card-content>
+      <p>
+        Play CS:GO with your team of 5 and try to beat every team in the league..
+      </p>
+      <p><span>Teams:</span>{{competition['teams']}}<p>
+      <p><span>Prizepool:</span> EUR {{competition['prizepool']}}<p>
+    </md-card-content>
+    <md-card-actions>
+      <a href="/competition/{{competition['id']}}" class="md-fab md-min0i" md-button color="primary">More Info</a>
+    </md-card-actions>
+  </md-card>
+</div>
+
+
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>

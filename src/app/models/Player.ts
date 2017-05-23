@@ -1,10 +1,11 @@
-
 export class Player {
-  firstname:string;
-  lastname:string;
-  nickname:string;
-  avatar:string;
-  game:string;
-  ratings:JSON;
+  id: number;
+  firstname: string;
+  lastname: string;
+  nickname: string;
+  avatar: string;
+  game: string;
+  team: string;
+  ratings: JSON;
+  rate_count: number;
 }
-

@@ -1,39 +1,32 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {JsonpModule, Jsonp, Response} from '@angular/http';
 import {AppComponent} from './app.component';
 import {MaterialModule} from "./material/material.module";
-import {NoopAnimationsModule, BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
-import {CommonModule} from "@angular/common";
 import {routing} from "./app.routes";
-//components
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
+// services
+import {PlayerService} from "./services/player.service";
+import {CompetitionService} from "./services/competition.service";
+// components
+import { CompetitionComponent } from './components/competitions/competition.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { CompetitionDetailsComponent } from "./components/competition-details/competition-details.component";
-import { UpcomingGamesComponent } from "./components/upcoming-games/upcoming-games.component";
-import { HomeComponent } from "./components/home/home.component";
-//services
-import { DrinksService } from "./services/drinks.service";
-import { PlayersService } from "./services/players.service";
-
-import {PlayersListComponent} from "./components/players-list/players-list.component";
-import {PlayersRateComponent} from "./components/players-rate/players-rate.component";
-import {PlayerDetailComponent} from "./components/player-detail/player-detail.component";
+import { PlayerListComponent} from "./components/player-list/player-list.component";
+import { PlayerDetailComponent } from './components/player-detail/player-detail.component';
+import { PlayerSearchComponent } from './components/player-search/player-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    HomeComponent,
-    CompetitionDetailsComponent,
-    UpcomingGamesComponent,
+    PlayerListComponent,
+    CompetitionComponent,
     NotFoundComponent,
-    PlayersListComponent,
-    PlayersRateComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    PlayerSearchComponent
   ],
   imports: [
     RouterModule,
@@ -42,15 +35,10 @@ import {PlayerDetailComponent} from "./components/player-detail/player-detail.co
     NoopAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    CommonModule
+    MaterialModule
   ],
-  providers: [DrinksService, PlayersService],
+  providers: [PlayerService, CompetitionService],
   bootstrap: [AppComponent]
 })
-
 export class AppModule {
-
 }
