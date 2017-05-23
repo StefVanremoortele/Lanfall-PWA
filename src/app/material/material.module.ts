@@ -1,5 +1,4 @@
 import {NgModule} from "@angular/core";
-import { DatepickerModule } from "angular2-material-datepicker";
 import {
   MdButtonModule,
   MdCardModule,
@@ -16,7 +15,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   imports: [
-    DatepickerModule,
     MdButtonModule,
     MdIconModule,
     MdCardModule,
@@ -29,7 +27,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MdProgressBarModule
   ],
   exports: [
-    DatepickerModule,
     MdListModule,
     MdButtonModule,
     MdIconModule,
