@@ -29,7 +29,7 @@ export class PlayerListComponent implements OnInit {
 
 
   gotoDetail(player: Player): void {
-    const link = ['/detail', player.id];
+    const link = ['/player', player.id];
     this.router.navigate(link);
   }
 

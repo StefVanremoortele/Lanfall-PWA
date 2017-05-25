@@ -1,5 +1,5 @@
 
-
+<h1>Search a player:</h1>
 <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
 <div class="player-content" *ngIf="!loading && players && !hasError" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
   <div fxFlex.gt-sm="67" fxFlex.gt-md="33" fxFlex="100"  *ngFor="let player of players | async"
@@ -18,7 +18,7 @@
               <p>Game: {{player['game']}}</p>                
           </md-card-content>  
           <div align="end">
-              <a href="/player/{{player['id']}}" class="md-fab md-min0i" md-button color="primary">Player Details</a>         
+              <a class="md-fab md-min0i" md-button color="primary">Player Details</a>         
           </div>
       </md-card>
   </div>

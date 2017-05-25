@@ -17,6 +17,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PlayerListComponent} from "./components/player-list/player-list.component";
 import { PlayerDetailComponent } from './components/player-detail/player-detail.component';
 import { PlayerSearchComponent } from './components/player-search/player-search.component';
+import { CompetitionDetailComponent } from './components/competitions/competition-detail/competition-detail.component';
+import { HomeComponent } from './components/home/home.component';
+import { OrderAtSeatComponent } from './components/order-at-seat/order-at-seat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { PlayerSearchComponent } from './components/player-search/player-search.
     CompetitionComponent,
     NotFoundComponent,
     PlayerDetailComponent,
-    PlayerSearchComponent
+    PlayerSearchComponent,
+    CompetitionDetailComponent,
+    HomeComponent,
+    OrderAtSeatComponent
   ],
   imports: [
     RouterModule,

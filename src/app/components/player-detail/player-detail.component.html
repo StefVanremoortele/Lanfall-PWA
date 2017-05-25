@@ -25,16 +25,6 @@
 <div class="player-content" *ngIf="player && !hasError " fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
     <div class="player-detail" fxFlex.gt-sm="500" fxFlex.gt-md="500" fxFlex="500">
       <div *ngIf="player">
-        <h2>{{player.nickname}} details!</h2>
-        <div>
-          <label>id: </label>{{player.id}}</div>
-        <div>
-          <label>name: </label>
-          <input [(ngModel)]="player.nickname" placeholder="name" />
-        </div>
-        <button (click)="goBack()">Back</button>
-        <button (click)="save()">Save</button>
-      </div>
 
         <!-- TODO: AVATAR -->
         <md-card>
@@ -45,7 +35,7 @@
             <md-card-header>
                 <div aligh="end">
                     <md-card-title-group>
-                        <img md-card-avatar src="./{{player['avatar']}}">
+                        <img md-card-avatar src="{{player['avatar']}}">
                         <md-card-title>{{player['lastname']}} {{player['firstname']}}</md-card-title>
                     </md-card-title-group>
                 </div>
@@ -56,26 +46,27 @@
             </md-card-content>
             <md-card-content>
                 <section class="example-section">
-                    <p>Brains: {{player}}</p>
-                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player">
+                    <p>Brains: {{player['ratings'].brains}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.brains">
                     </md-progress-bar>
                 </section>
             </md-card-content>
             <md-card-content>
                 <section class="example-section">
-                    <p>Talent: {{player}}</p>
-                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player">
+                    <p>Talent: {{player['ratings'].talent}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.talent">
                     </md-progress-bar>
                 </section>
             </md-card-content>
             <md-card-content>
                 <section class="example-section">
-                    <p>Respect: {{player}}</p>
-                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player">
+                    <p>Respect: {{player['ratings'].respect}}</p>
+                    <md-progress-bar class="example-margin" color="primary" mode="determinate" [value]="player.ratings.respect">
                     </md-progress-bar>
                 </section>
             </md-card-content>
         </md-card>
+        <button (click)="goBack()">Back</button>
     </div>
 </div>
 

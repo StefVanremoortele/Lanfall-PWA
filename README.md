@@ -1,5 +1,7 @@
 # Lanfall PWA
 #### Lanfall v5.0 Progressive Web app
+
+
 <hr/>
 <p align="center"><b>What is this?</b></p>
 <hr/>
@@ -26,10 +28,10 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 <p>
   It makes use of
   <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">Service Worker</a> and
-  <a href="https://github.com/GoogleChrome/sw-toolbox" >SW toolbox</a>
+  <a href="https://github.com/GoogleChrome/sw-precache" >SW precache</a>
 </p>
 <p>
-  <a href="https://github.com/angular/in-memory-web-api" >angular-in-memory-web-api</a> for back-end data
+  ~~<a href="https://github.com/angular/in-memory-web-api" >angular-in-memory-web-api</a>~~ json-server for back-end data
 
 </p>
 </em>
@@ -42,12 +44,13 @@ An application that (hopefully) will serve during the weekend of Lanfall's LAN-p
 - clone the project
 - step into the folder
 <b>
-- npm install
-- npm install -g @angular/cli
-- npm install -g angular-compiler
+- npm install<br/>
+- npm install -g @angular/cli<br/>
+- npm install -g angular-compiler<br/>
 </b>
 
-Run the project: <b>ng serve</b> 
+Run the project: <b>ng serve</b>
+Serve to localhost:4200
 
 <hr/>
 <p align="center"><b>I little more detail?</b></p>
@@ -100,7 +103,7 @@ Payment stays the same: pay cash @ delivery
 
 <b>Manifest:</b> Used to make an app shell => the basics of your app...
 
-<b>Protractor:</b> Handy for testing your angular app. I see it as the JUnit testing in java.
+<b>Jasmine:</b> Handy for testing your angular app. I see it as the JUnit testing in java.
 
 
 <b>Angular:</b> I've learned the fundamentals of angular:
@@ -115,7 +118,7 @@ Payment stays the same: pay cash @ delivery
 
 <b>Git:</b> Not every aspect of git was clear to me before this project. By using git for this app I now master the git-techniques.
 
-<b>npm:</b> By having some trouble (<b>read: enormous amounts of trouble</b>) with different angular and material versions, I now have more control of npm.
+<b>npm:</b> By having some trouble (<b>read: enormous amounts of trouble</b>) with different angular and material versions, I now have more control of node package manager.
 
 
 <hr/>
@@ -130,3 +133,16 @@ Payment stays the same: pay cash @ delivery
   **VERSION:** | `6.10.3`  | `2.2`      | `1.0.0`       | `4.0`   | `2.0.0-beta3`
 
 </div>
+
+
+<hr/>
+<p align="center"><b>To my teachers:</b></p>
+<hr/>
+
+I kind of underestimated angular (and serviceworkers).
+Thereby I came short with time to finish my app (or even make some basic functionality).
+I did, however, manage to make sure the user gets a good offline experience, As well as a pleasant lie-fi experience, which I find the most important. 
+
+I've really learned a lot during this project and i'm proud to say that i understand every single line of code in this folder (except for all node modules).
+
+And sorry, in case you've had to install something to let run my app.

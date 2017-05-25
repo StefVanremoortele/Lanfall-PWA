@@ -1,0 +1,49 @@
+<div class="no-connection" *ngIf="!player && hasError">
+  <md-card>    
+    <div class="picture-wrapper">
+      <img class="no-connection-image" md-card-image src="../../../assets/images/no-connection.png">
+    </div>
+    <md-card-content>
+      <p>If you are offline viewing, you'll need to visit this page with a network connection first before it can work offline.
+      </p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="competition-content" *ngIf="competition && !hasError " fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center center">
+    <div class="competition-detail" fxFlex.gt-sm="500" fxFlex.gt-md="500" fxFlex="500">
+
+    <md-card>
+        <md-toolbar color="primary">
+          <span>{{competition['game']}}</span>
+        </md-toolbar>
+        <md-card-header>
+          <md-card-title-group>
+            <md-card-title>Teams: {{competition['teams']}}</md-card-title>
+          </md-card-title-group>
+        </md-card-header>
+        <md-card-content>
+          <p>Prizepool: {{competition['prizepool']}}</p>
+          <p>First:</p>
+          <ul>
+            <li *ngFor="let prize of competition.prizes.first">{{prize}}</li>
+          </ul>
+          <p>Second:</p>
+          <ul>
+            <li *ngFor="let prize of competition.prizes.second">{{prize}}</li>
+          </ul>
+          <p>Third:</p>
+          <ul>
+            <li *ngFor="let prize of competition.prizes.third">{{prize}}</li>
+          </ul>
+        </md-card-content>
+      </md-card>
+    </div>
+</div>
+    <button (click)="goBack()">Back</button>
+
+
+<!-- Page Loader -->
+<md-progress-spinner mode="indeterminate" *ngIf="loading" class="center-spinner center-screen"></md-progress-spinner>
+
+

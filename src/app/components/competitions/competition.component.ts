@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CompetitionService} from "../../services/competition.service";
+import { Router } from '@angular/router';
+import { Competition } from '../../models/Competition';
 
 @Component({
   selector: 'app-competitions',
@@ -11,7 +13,9 @@ export class CompetitionComponent implements OnInit {
   public loading: boolean;
   public competitions: Array<any>;
 
-  public constructor(private _competitionService: CompetitionService) {
+  public constructor(
+    private _competitionService: CompetitionService,
+    private router: Router) {
   }
 
   public ngOnInit(): void {
@@ -22,4 +26,8 @@ export class CompetitionComponent implements OnInit {
       .catch((error) => this.hasError = error);
   }
 
+  gotoDetail(competition: Competition): void {
+    const link = ['/competition', competition.id];
+    this.router.navigate(link);
+  }
 }
